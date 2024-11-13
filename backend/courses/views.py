@@ -76,3 +76,33 @@ class CourseChat(APIView):
             }
         )
         return Response({"message": ai_msg.content}, status=status.HTTP_200_OK)
+    
+
+class SuggestedCourseChat(APIView):
+    def post(self, request):
+        messages = request.data["messages"]
+        formatted_messages = list(map(lambda m: (m["sender"], m["message"]), messages))
+
+        llm = ChatGoogleGenerativeAI(
+            model="gemini-1.5-pro",
+            temperature=0,
+            max_tokens=None
+        )
+
+        if len(formatted_messages) <= 2:
+            final_messages = [
+                (
+                        "system",
+                        " Your students belong from a dry climatic region. Assume your students are mostly women. Ask 2 questions. Ask clarifying questions regarding the human's educational background and past work experiences."
+                ),
+            ]
+        else:
+            final_messages = [
+                (
+                        "system",
+                        "You are a expert student counsellor for advising students to take up courses related to new businesses. Your students belong from a dry climatic region. Assume your students are mostly women. Give exact course titles and a small description. Don't give generic asnwers like basic skills etc. Give diverse answers. Skip any form of introduction. I repeat, do not suggest courses until you know the students' background. Answer within 200 words. Suggest courses related to rural businesses like bee keeping, millet farming, knitting etc."
+                ),
+            ]
+        final_messages.extend(formatted_messages)
+        ai_msg = llm.invoke(final_messages)
+        return Response({"message": ai_msg.content}, status=status.HTTP_200_OK)

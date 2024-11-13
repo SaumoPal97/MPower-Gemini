@@ -1,9 +1,14 @@
+import os
 from crewai import Agent, Task, Crew
 from crewai_tools import  SerperDevTool
 from pydantic import BaseModel, Field
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from .models import Course, Chapter
+
+if os.environ.get('ENV') != "production":
+    from dotenv import load_dotenv
+    load_dotenv()
 
 # Tools
 search_tool = SerperDevTool()
