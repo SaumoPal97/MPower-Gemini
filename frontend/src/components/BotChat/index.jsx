@@ -87,6 +87,12 @@ function BotChat({ style, chatEndpoint }) {
 
   useEffect(() => {
     const callApi = async () => {
+      const aiLoadingMessage = {
+        id: uuidv4(),
+        isLoading: true,
+        sender: "ai",
+      };
+      setMessages([...messages, aiLoadingMessage]);
       const response = await fetch(`${API_URL}${chatEndpoint}`, {
         method: "POST",
         headers: {
@@ -98,7 +104,7 @@ function BotChat({ style, chatEndpoint }) {
       });
       const res = await response.json();
       setMessages([
-        ...messages,
+        ...messages.filter((message) => message?.id != aiLoadingMessage.id),
         {
           id: uuidv4(),
           message: res["message"],

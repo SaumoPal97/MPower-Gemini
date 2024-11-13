@@ -10,7 +10,7 @@ Hence, MPower focuses on using generative AI to provide climate-affected women w
 
 ## Demo Video
 
-[![Watch the video](./images/yt.png)]()
+[![Watch the video](./images/yt.png)](https://www.youtube.com/watch?v=EKb3T7MNIHw)
 
 ## What it does
 
@@ -50,7 +50,7 @@ The platform offers training on assembling, maintaining, and marketing solar-pow
 #### Outcome:
 The women successfully establish solar energy businesses, reducing deforestation and indoor air pollution while generating income. They become local leaders in promoting clean energy, improving community health, and contributing to climate resilience.
 
-More usecases can be found in our [description document](https://github.com/SaumoPal97/MPower/blob/main/DESCRIPTION.md).
+More usecases can be found in our [description document](./DESCRIPTION.md).
 
 ## How we built it
 

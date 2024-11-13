@@ -103,7 +103,7 @@ function Courses() {
           </p>
           <BotChat
             style={{ height }}
-            chatEndpoint="/v1/api/courses/chat/suggested"
+            chatEndpoint="/v1/api/courses/suggested/"
           />
         </div>
       </div>
