@@ -8,6 +8,10 @@ Many women, particularly in rural and agricultural communities, like Africa, Ind
 In many communities, women are already economically marginalised, and climate-induced loss of income exacerbates poverty and gender inequality. Finding sustainable, alternative livelihood opportunities is challenging, especially in rural areas with limited access to formal education, resources, or markets.
 Hence, MPower focuses on using generative AI to provide climate-affected women with sustainable, alternative livelihoods.
 
+## Demo Video
+
+[![Watch the video](./images/yt.png)]()
+
 ## What it does
 
 MPower would use generative AI to create tailored livelihood suggestions based on available local resources, skills, and climate conditions. It could help women transition to new, sustainable income-generating activities that are more resilient to climate change. The AI could also generate business ideas, provide training recommendations, and connect users to microfinance loan programs. A couple of examples below to drive home the idea:
