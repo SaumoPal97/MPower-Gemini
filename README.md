@@ -108,3 +108,19 @@ We are really excited to get the V1 of MPower up and running which currently doe
 - Build a richer, faster and affordable course creator functionality powered by Gemini Pro, Flash and Nano models
 - Incorporate social and community tools for women entrepreneurs across the world to interact and share their knowledge
 - Launch V1 of an AI powered business coach to not just help women entrepreneurs learn new business courses but also help them launch, scale and become financially successful in their endeavour
+
+## How to run the project
+
+### Backend
+
+1. Run `cd backend/`
+2. Make a copy of `.env.sample`, name it `.env` and fill the variables
+3. Run `docker-compose -f docker-compose.yml build`
+3. Run `docker-compose -f docker-compose.yml up`
+
+### Frontend
+
+1. Run `cd frontend/`
+2. Run `npm install`
+3. Make a copy of `.env.sample`, name it `.env` and fill the variables
+4. Run `npm run dev`
